@@ -39,7 +39,6 @@ for x, name in zip([X, three_feature_df, two_feature_df, one_feature_df], ['all'
     X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.1, random_state=0)
     lr.fit(X_train, y_train)
     [print(x, y) for x, y in zip(lr.predict(X_test), y_test)]
-    # print(f"MSE using {name} features: {mean_squared_error(y_test, lr.predict(X_test))}")
 
 
 # serializing file
