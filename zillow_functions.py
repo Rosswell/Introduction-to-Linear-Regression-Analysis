@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Zillow scraper functions, these are sourced at the top of zillow_runfile.py
+# Zillow scraper functions, these are sourced at the top of browser_runfile.py
 
 import re as re
 import time

@@ -37,7 +37,7 @@ from bs4 import BeautifulSoup
 # end up missing most of the results.
 # Param st_items can be either a list of zipcode strings, or a single zipcode 
 # string.
-st = zl.zipcodes_list(st_items = ['900', '901', '902'])
+st = zl.zipcodes_list(st_items=['900', '901', '902'])
 
 # Initialize the webdriver.
 driver = zl.init_driver("/Users/rossi/PycharmProjects/Introduction_to_Linear_Regression_Analysis/chromedriver")
@@ -50,13 +50,14 @@ zl.click_buy_button(driver)
 
 # Create 11 variables from the scrapped HTML data.
 # These variables will make up the final output dataframe.
-df = pd.DataFrame({'bathrooms' : [],
-                   'bedrooms' : [], 
-                   'city' : [],
-                   'price' : [],
-                   'state' : [], 
-                   'sqft' : [],
-                   'zip' : []})
+df = pd.DataFrame({'bathrooms': [],
+                   'bedrooms': [],
+                   'city': [],
+                   'price': [],
+                   'state': [],
+                   'sqft': [],
+                   'zip': []
+                   })
 
 # Get total number of search terms.
 num_search_terms = len(st)
@@ -134,4 +135,4 @@ columns = ['city', 'state', 'zip', 'price', 'sqft', 'bedrooms', 'bathrooms']
 df = df[columns]
 dt = time.strftime("%Y-%m-%d") + "_" + time.strftime("%H%M%S")
 file_name = str(dt) + ".csv"
-df.to_csv(file_name, index = False)
+df.to_csv(file_name, index=False)
